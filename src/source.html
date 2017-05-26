@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="styles2.css">
 <script src="javaScript.js"></script>
 </head>
 
-<div id="sidebar" class="sidenav">
-	<a href="#" onclick="return show('Dashboard');">Dashboard</a>
-	<a href="#" onclick="return show('AssignmentMenu');">Assignments</a>
-	<a href="#" onclick="return show('ReviewMenu');">Review</a>
-	<a href="#" onclick="return show('FeedbackMenu');">Feedback</a>
-</div>
+<div class='wrap'>
+	<div id="sidebar" class="sidenav">
+		<a href="#" onclick="return show('Dashboard');">Dashboard</a>
+		<a href="#" onclick="return show('AssignmentMenu');">Assignments</a>
+		<a href="#" onclick="return show('ReviewMenu');">Review</a>
+		<a href="#" onclick="return show('FeedbackMenu');">Feedback</a>
+	</div>
 
-<div id="mainScreen">
-	<div id="Dashboard" class="screenComp">
-		<h1 id="screenTitle" class="screenTitle">Dashboard</h1>
-		<h2 id="assignmentsTitle" class="secondarytitle">Assignments</h2>
-		<h2 id="reviewTitle" class="secondarytitle">Assignments</h2>
-		<h2 id="feedbackTitle" class="secondarytitle">Assignments</h2>
+	<div class="mainScreen">
+		<div id="Dashboard" class="screenComp">
+			<h1 id="screenTitle" class="screenTitle">Dashboard</h1>
+			<h2 id="assignmentsTitle" class="secondarytitle">Assignments</h2>
+			<h2 id="reviewTitle" class="secondarytitle">Review</h2>
+			<h2 id="feedbackTitle" class="secondarytitle">Feedback</h2>
 
-	</div>
-	<div id="AssignmentMenu" class="AssignmentMenu">
-		<h1 id="screenTitle" class="screenTitle">Assignments</h1>
-		content of assignment menu
-	</div>
-	<div id="ReviewMenu" class="ReviewMenu">
-		<h1 id="screenTitle" class="screenTitle">Reviews</h1>
-		content of review menu
-	</div>
-	<div id="FeedbackMenu" class="FeedbackMenu">
-		<h1 id="screenTitle" class="screenTitle">Feedback</h1>
-		content of feedback menu
+		</div>
+		<div id="AssignmentMenu" class="screenComp">
+			<h1 id="screenTitle" class="screenTitle">Assignments</h1>
+      			<table id="AssignmentsTable" class="displayTable"></table>
+		
+		</div>
+		<div id="ReviewMenu" class="screenComp">
+			<h1 id="screenTitle" class="screenTitle">Reviews</h1>
+      			<table id="ReviewsTable" class="displayTable"></table>
+		</div>
+		<div id="FeedbackMenu" class="screenComp">
+			<h1 id="screenTitle" class="screenTitle">Feedback</h1>
+      			<table id="FeedbackTable" class="displayTable"></table>
+		</div>
 	</div>
 </div>
 </html>

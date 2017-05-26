@@ -1,4 +1,5 @@
-function show(shown) {
-  document.getElementById(shown).style.display='block';
-  return false;
+function show(shown, hide) {
+ 	document.getElementById(shown).style.display='block';
+	document.getElementById(hide).style.display='none';
+ 	return false;
 }
