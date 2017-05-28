@@ -3,36 +3,194 @@
 <head>
 <link rel="stylesheet" type="text/css" href="styles2.css">
 <script src="javaScript.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 <div class='wrap'>
 	<div id="sidebar" class="sidenav">
-		<a href="#" onclick="return show('Dashboard');">Dashboard</a>
-		<a href="#" onclick="return show('AssignmentMenu');">Assignments</a>
-		<a href="#" onclick="return show('ReviewMenu');">Review</a>
-		<a href="#" onclick="return show('FeedbackMenu');">Feedback</a>
+		<a></a>
+		<a href="#" onclick="return show('Dashboard');">
+			<div class="menu-item-icon-container">
+				<div class="ic-avatar">
+					<i class="glyphicon glyphicon-dashboard" style="font-size:40px;color:#818181;"></i>
+				</div>
+			</div>
+			<div class="menu-item-text">
+					Dashboard
+			</div>
+		</a>
+		<a href="#" onclick="return show('AssignmentMenu');">
+			<div class="menu-item-icon-container">
+				<div class="ic-avatar">
+					<i class="glyphicon glyphicon-tasks" style="font-size:40px;color:#818181;"></i>
+				</div>
+			</div>
+			<div class="menu-item-text">
+					Assignments
+			</div>
+		</a>
+			
+		<a href="#" onclick="return show('ReviewMenu');">
+			<div class="menu-item-icon-container">
+				<div class="ic-avatar">
+					<i class="glyphicon glyphicon-eye-open" style="font-size:40px;color:#818181;"></i>
+				</div>
+			</div>
+			<div class="menu-item-text">
+					Review
+			</div>
+		</a>
+		<a href="#" onclick="return show('FeedbackMenu');">
+			<div class="menu-item-icon-container">
+				<div class="ic-avatar">
+					<i class="glyphicon glyphicon-stats" style="font-size:40px;color:#818181;"></i>
+				</div>
+			</div>
+			<div class="menu-item-text">
+					Feedback
+			</div>
+		</a>
 	</div>
 
 	<div class="mainScreen">
 		<div id="Dashboard" class="screenComp">
 			<h1 id="screenTitle" class="screenTitle">Dashboard</h1>
-			<h2 id="assignmentsTitle" class="secondarytitle">Assignments</h2>
-			<h2 id="reviewTitle" class="secondarytitle">Review</h2>
-			<h2 id="feedbackTitle" class="secondarytitle">Feedback</h2>
-
+			
+			<div id="assignmentsSection" class="dashboardSection">
+				<h2 id="assignmentsTitle" class="secondarytitle">Assignments</h2>
+				<div id=assignmentListSection class=listSection>
+					<table id="AssignmentsList" class="dashboardList">
+						<tr>
+						<td>Assignment 4</td>
+						<td>27/06</td>
+						<td><form><input type=submit value="Continue"></form></td>
+						</tr><tr>
+						<td>Training plan</td>
+						<td>31/06</td>
+						<td><form><input type=submit value="Start"></form></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			
+			<div id="reviewSection" class="dashboardSection">
+				<h2 id="reviewTitle" class="secondarytitle">Review</h2>
+				<div id=reviewListSection class=listSection>
+					<table id="ReviewList" class="dashboardList">
+						<tr>
+							<td>Matt LeBlanc</td>
+							<td>Assignment 3</td>
+							<td><form><input type=submit value="Review"></form></td>
+						</tr><tr>
+							<td>Sharon Osbourne</td>
+							<td>Assignment 2</td>
+							<td><form><input type=submit value="Review"></form></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		
+			<div id="feedbackSection" class="dashboardSection">
+				<h2 id="feedbackTitle" class="secondarytitle">Feedback</h2>
+				<table id="FeedbackList" class="dashboardList">
+					<td>Dave Franco</td>
+					<td>Assignment 3</td>
+					<td><form><input type=submit value="View"></form></td>
+				</table>
+			</div>
 		</div>
+
 		<div id="AssignmentMenu" class="screenComp">
 			<h1 id="screenTitle" class="screenTitle">Assignments</h1>
-      			<table id="AssignmentsTable" class="displayTable"></table>
-		
+     		<table id="AssignmentsTable" class="displayTable">
+				<tr>
+					<td>Assignment 4</td>
+					<td>27/06</td>
+					<td><form><input type=submit value="Continue"></form></td>
+				</tr>
+				<tr>
+					<td>Training plan</td>
+					<td>31/06</td>
+					<td><form><input type=submit value="Start"></form></td>
+				</tr>
+			</table>
 		</div>
+
 		<div id="ReviewMenu" class="screenComp">
 			<h1 id="screenTitle" class="screenTitle">Reviews</h1>
-      			<table id="ReviewsTable" class="displayTable"></table>
+      		<table id="ReviewsTable" class="displayTable">
+				<tr>
+					<td>Matt LeBlanc</td>
+					<td>Assignment 3</td>
+					<td><form><input type=submit value="Review"></form></td>
+				</tr>
+				<tr>
+					<td>Sharon Osbourne</td>
+					<td>Assignment 2</td>
+					<td><form><input type=submit value="Review"></form></td>
+				</tr>
+			</table>
 		</div>
+
 		<div id="FeedbackMenu" class="screenComp">
 			<h1 id="screenTitle" class="screenTitle">Feedback</h1>
-      			<table id="FeedbackTable" class="displayTable"></table>
+      		<table id="FeedbackTable" class="displayTable">
+				<td>Dave Franco</td>
+				<td>Assignment 3</td>
+				<td><form><input type=submit value="View"></form></td>
+			</table>
+		</div>
+		
+		<div id="completingAssignment4" class="screenComp">
+			<h1 id="screenTitle" class="screenTitle">Assignment 4</h1>
+			<div id="questionSection">
+				<h2>Problem</h2>
+				<p></p>
+			</div>
+			<div id="answerSection">
+				<h2>Solution</h2>
+				<p>Write your answer here:</p>
+				<button type="Button" id=submitButton>Submit</button>
+			</div>
+		</div>
+		
+		<div id="completingTrainingPlan" class="screenComp">
+			<h1 id="screenTitle" class="screenTitle">Training plan</h1>
+			<div id="questionSection">
+				<h2>Problem</h2>
+				<p></p>
+			</div>
+			<div id="answerSection">
+				<h2>Solution</h2>
+				<p></p>
+				<button type="Button" id=submitButton>Submit</button>
+			</div>
+		</div>
+		
+		<div id="ReviewingAssignment3" class="screenComp">
+			<h1 id="screenTitle" class="screenTitle">Matt LeBlanc-Assignment 3</h1>			
+			<div id="questionSection">
+				<h2>Problem</h2>
+				<p></p>
+			</div>
+			<div id="answerSection">
+				<h2>Solution</h2>
+				<p></p>
+				<button type="Button" id=submitButton>Submit</button>
+			</div>
+		</div>
+		
+		<div id="ViewingFeedbackAssignment3" class="screenComp">
+			<h1 id="screenTitle" class="screenTitle">Assignment 3</h1>
+			<div id="questionSection">
+				<h2>Problem</h2>
+				<p></p>
+			</div>
+			<div id="answerSection">
+				<h2>Solution</h2>
+				<p></p>
+				<button type="Button" id=submitButton>Submit</button>
+			</div>
 		</div>
 	</div>
 </div>
